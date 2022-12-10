@@ -40,7 +40,28 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ]
       ),
-      
+      //floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){_likedChange();},
+        backgroundColor: Colors.red,
+        child: _corazon
+        //icon: _corazon,
+        //label: Text('Like')
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue,
+        shape: CircularNotchedRectangle(),
+        child: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(onPressed: null, icon: Icon(Icons.camera_enhance, color: Colors.white)),
+              IconButton(onPressed: null, icon: Icon(Icons.arrow_back, color: Colors.white))
+            ]
+          )
+        )
+      )
     );
   }
 
